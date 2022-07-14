@@ -2,6 +2,7 @@
   "name": "eslint-config-toc",
   "version": "1.0.0",
   "description": "ESLint config for ToC TypeScript based projects",
+  "repository": "https://github.com/tired-of-cancer/eslint-config-toc",
   "main": "index.js",
   "scripts": {},
   "keywords": [
