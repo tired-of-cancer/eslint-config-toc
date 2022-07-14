@@ -1,0 +1,13 @@
+{
+  "name": "eslint-config-toc",
+  "version": "1.0.0",
+  "description": "ESLint config for ToC TypeScript based projects",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Rik van Duijn <ik@rikvanduijn.nl>",
+  "license": "MIT"
+}
