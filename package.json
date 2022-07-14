@@ -4,11 +4,40 @@
   "description": "ESLint config for ToC TypeScript based projects",
   "repository": "https://github.com/tired-of-cancer/eslint-config-toc",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "lint": "eslint ."
+  },
   "keywords": [
     "eslint",
     "eslintconfig"
   ],
   "author": "Rik van Duijn <ik@rikvanduijn.nl>",
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "setupPlugins.ts",
+    "typescript.ts",
+    "react.ts",
+    "react-native.ts",
+    "tsconfig.json"
+  ],
+  "devDependencies": {
+    "eslint": "^8.19.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  }
 }
