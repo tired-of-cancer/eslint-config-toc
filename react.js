@@ -16,7 +16,8 @@ module.exports = {
 
   extends: [
     'airbnb/hooks',
-    './typescript', // Place last to ensure our TS overrides have priority
+    './typescript', // Keep next-to-last: ensures our TS overrides have priority
+    'plugin:react/jsx-runtime', // Keep last: allows omitting React import in React 17+
   ],
 
   // Add React project specific rule deviations here.
