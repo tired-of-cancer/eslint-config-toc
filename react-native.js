@@ -1,4 +1,6 @@
 module.exports = {
+  root: true,
+
   plugins: [],
 
   settings: {
@@ -13,10 +15,8 @@ module.exports = {
   },
 
   extends: [
-    '@react-native-community',
-    'airbnb',
-    'airbnb-typescript',
     'airbnb/hooks',
+    '@react-native-community',
     'prettier',
     './typescript', // Place last to ensure our TS overrides have priority
   ],

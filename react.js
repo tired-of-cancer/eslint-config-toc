@@ -1,4 +1,6 @@
 module.exports = {
+  root: true,
+
   plugins: [],
 
   settings: {
@@ -13,8 +15,6 @@ module.exports = {
   },
 
   extends: [
-    'airbnb',
-    'airbnb-typescript',
     'airbnb/hooks',
     './typescript', // Place last to ensure our TS overrides have priority
   ],
