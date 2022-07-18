@@ -11,7 +11,14 @@ module.exports = {
 
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: [
+        '*.ts',
+        '*.tsx',
+        'android.ts',
+        'ios.ts',
+        'android.tsx',
+        'ios.tsx',
+      ],
 
       parserOptions: {
         ecmaVersion: 'latest',
@@ -24,6 +31,17 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'prettier',
       ],
+
+      // Add JavaScript and TypeScript rule deviations here.
+      rules: {
+        // Sync Prettier with ESLint to prevent formatter conflicts
+        'prettier/prettier': [
+          'error',
+          {
+            singleQuote: true,
+          },
+        ],
+      },
     },
   ],
 
@@ -31,16 +49,5 @@ module.exports = {
     node: true,
     browser: true,
     jest: true,
-  },
-
-  // Add JavaScript and TypeScript rule deviations here.
-  rules: {
-    // Sync Prettier with ESLint to prevent formatter conflicts
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-      },
-    ],
   },
 };
