@@ -1,7 +1,7 @@
 module.exports = Object.assign(
   {},
   {
-    extends: ['./typescript', './react', './react-native'],
+    extends: ['./typescript'],
     env: {
       node: true,
     }

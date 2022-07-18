@@ -6,7 +6,7 @@ module.exports = {
     project: './tsconfig.json',
   },
 
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'prettier'],
 
   settings: {
     'import/resolver': 'node',
@@ -28,6 +28,11 @@ module.exports = {
   // Add JavaScript and TypeScript rule deviations here.
   rules: {
     // Sync Prettier with ESLint to prevent formatter conflicts
-    'prettier/prettier': ['error', { singleQuote: true }],
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+      },
+    ],
   },
 };

@@ -16,7 +16,9 @@ This package allows us to make decisions on code styling for all TypeScript base
 ## ⚙️ Usage
 
 1. `yarn add -D eslint eslint-config-toc`
-1. Setup your project config in `.eslintrc.js`:
+2. Setup your project config in `.eslintrc.js`:
+
+**For bare TypeScript projects**
 
 ```js
 // This enables ESLint to use dependencies of this config
@@ -24,17 +26,42 @@ This package allows us to make decisions on code styling for all TypeScript base
 require('eslint-config-toc/setupPlugins');
 
 module.exports = {
-  // Add configs based on your needs
   extends: [
     'toc/typescript',
-    'toc/react', // Optional, adds React web config
-    'toc/react-native', // Optional, adds React Native config
   ]
 }
 ```
 
-1. If you use TypeScript, add `"extends": "eslint-config-toc/tsconfig.json"` to your `tsconfig.json`.
-1. Happy linting!
+**For React web projects**
+
+```js
+// This enables ESLint to use dependencies of this config
+// (see https://github.com/eslint/eslint/issues/3458)
+require('eslint-config-toc/setupPlugins');
+
+module.exports = {
+  extends: [
+    'toc/react',
+  ]
+}
+```
+
+**For React Native projects**
+
+```js
+// This enables ESLint to use dependencies of this config
+// (see https://github.com/eslint/eslint/issues/3458)
+require('eslint-config-toc/setupPlugins');
+
+module.exports = {
+  extends: [
+    'toc/react-native',
+  ]
+}
+```
+
+3. If you use TypeScript, add `"extends": "eslint-config-toc/tsconfig.json"` to your `tsconfig.json`.
+4. Happy linting!
 
 ## 📣 Proposing changes
 
