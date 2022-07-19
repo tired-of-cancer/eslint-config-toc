@@ -27,7 +27,7 @@ jobs:
         with:
           version: ${{ steps.draft_release.outputs.tag_name }}
           git-tag-version: 'false'
-      
+
       - name: Commit version number update if changed
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
