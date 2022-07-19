@@ -18,7 +18,7 @@ module.exports = {
     'airbnb/hooks',
     '@react-native-community',
     'prettier',
-    './typescript', // Keep next-to-last: ensures our TS overrides have priority
+    './react', // Keep next-to-last: ensures our React and TS overrides have priority
     'plugin:react/jsx-runtime', // Keep last: allows omitting React import in React 17+
   ],
 
