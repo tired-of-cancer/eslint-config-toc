@@ -9,6 +9,16 @@ module.exports = {
     'import/resolver': 'node',
   },
 
+  rules: {
+    // Sync Prettier with ESLint to prevent formatter conflicts
+    'prettier/prettier': [
+      'error',
+      {
+        ...require('./.prettierrc'),
+      },
+    ],
+  },
+
   overrides: [
     {
       files: [
@@ -38,7 +48,7 @@ module.exports = {
         'prettier/prettier': [
           'error',
           {
-            singleQuote: true,
+            ...require('./.prettierrc'),
           },
         ],
       },

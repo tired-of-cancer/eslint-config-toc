@@ -12,6 +12,6 @@
 
 Add this snippet to a specific projects eslint config to (temporarily) ignore the proposed change.
 
-``` js
+```js
 // Snippet
 ```
