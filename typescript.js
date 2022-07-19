@@ -1,23 +1,29 @@
+// Add JavaScript and TypeScript rule deviations here.
+const rules = {
+  // Sync Prettier with ESLint to prevent formatter conflicts
+  'prettier/prettier': [
+    'error',
+    {
+      // eslint-disable-next-line global-require
+      ...require('./.prettierrc'),
+    },
+  ],
+};
+
 module.exports = {
   parser: '@typescript-eslint/parser',
 
   root: true,
 
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['prettier'],
+
+  extends: ['airbnb', 'prettier'],
 
   settings: {
     'import/resolver': 'node',
   },
 
-  rules: {
-    // Sync Prettier with ESLint to prevent formatter conflicts
-    'prettier/prettier': [
-      'error',
-      {
-        ...require('./.prettierrc'),
-      },
-    ],
-  },
+  rules,
 
   overrides: [
     {
@@ -35,6 +41,8 @@ module.exports = {
         project: './tsconfig.json',
       },
 
+      plugins: ['@typescript-eslint', 'prettier'],
+
       extends: [
         'airbnb',
         'airbnb-typescript',
@@ -42,16 +50,7 @@ module.exports = {
         'prettier',
       ],
 
-      // Add JavaScript and TypeScript rule deviations here.
-      rules: {
-        // Sync Prettier with ESLint to prevent formatter conflicts
-        'prettier/prettier': [
-          'error',
-          {
-            ...require('./.prettierrc'),
-          },
-        ],
-      },
+      rules,
     },
   ],
 
