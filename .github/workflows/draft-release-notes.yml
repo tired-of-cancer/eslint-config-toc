@@ -1,19 +1,14 @@
-name: Draft release notes
+name: Draft release notes and update version
 
 on:
-  pull_request:
+  push:
     branches:
       - main
-    types: [closed]
-
-permissions:
-  contents: read
 
 jobs:
-  update_release_draft:
-    if: github.event.pull_request.merged == true # only for PRs that are merged into main
+  update_release_draft_and_version:
     permissions:
-      contents: write # for release-drafter/release-drafter to create a github release
+      contents: write # to create a release draft and a commit with the version number
     runs-on: ubuntu-latest
     steps:
       - name: Draft a new release
@@ -24,9 +19,16 @@ jobs:
 
       - name: Check out Git repository
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Update package version
         uses: reedyuk/npm-version@1.1.1
         with:
           version: ${{ steps.draft_release.outputs.tag_name }}
           git-tag-version: 'false'
+      
+      - name: Commit version number update if changed
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Set version to match next release draft
