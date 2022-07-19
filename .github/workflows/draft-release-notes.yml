@@ -1,19 +1,32 @@
 name: Draft release notes
 
 on:
-  push:
+  pull_request:
     branches:
       - main
+    types: [closed]
 
 permissions:
   contents: read
 
 jobs:
   update_release_draft:
+    if: github.event.pull_request.merged == true # only for PRs that are merged into main
     permissions:
-      contents: write  # for release-drafter/release-drafter to create a github release
+      contents: write # for release-drafter/release-drafter to create a github release
     runs-on: ubuntu-latest
     steps:
-      - uses: release-drafter/release-drafter@v5
+      - name: Draft a new release
+        id: draft_release
+        uses: release-drafter/release-drafter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Update package version
+        uses: reedyuk/npm-version@1.1.1
+        with:
+          version: ${{ steps.draft_release.outputs.tag_name }}
+          git-tag-version: 'false'
