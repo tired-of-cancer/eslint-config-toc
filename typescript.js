@@ -8,6 +8,10 @@ const rules = {
       ...require('./.prettierrc'),
     },
   ],
+
+  // Enforce named exports to ensure consistent usage of component throughout the codebase.
+  'import/prefer-default-export': 'off',
+  'import/no-default-export': 'error',
 };
 
 module.exports = {

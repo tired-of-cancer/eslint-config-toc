@@ -78,6 +78,8 @@ If all of these questions can be answered with a strong 'YES', go ahead with a p
    - What will the impact be on existing projects.
    - How can the changes be (temporarily) ignored. Add a code snippet.
 
+☝️ For an example PR, see #1.
+
 When the PR is ready for review, request reviews from the rest of the team. Discussion should happen in the PR comments as much as possible to ensure future developers can see why certain decissions were made in the past.
 
 When more than half of the rest of the team agrees with the proposed changes, the PR can be merged.
