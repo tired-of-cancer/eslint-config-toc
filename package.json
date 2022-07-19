@@ -21,10 +21,10 @@
     "tsconfig.json"
   ],
   "devDependencies": {
-    "eslint": "8.19.0"
+    "eslint": "8.20.0"
   },
   "peerDependencies": {
-    "eslint": "^7.0.0"
+    "eslint": "^7.0.0 || ^8.0.0"
   },
   "dependencies": {
     "@react-native-community/eslint-config": "^3.0.3",
