@@ -24,6 +24,7 @@ jobs:
 
       - name: Update package version
         uses: reedyuk/npm-version@1.1.1
+        continue-on-error: true
         with:
           version: ${{ steps.draft_release.outputs.tag_name }}
           git-tag-version: 'false'
