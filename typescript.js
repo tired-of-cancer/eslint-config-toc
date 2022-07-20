@@ -12,6 +12,17 @@ const rules = {
   // Enforce named exports to ensure consistent usage of component throughout the codebase.
   'import/prefer-default-export': 'off',
   'import/no-default-export': 'error',
+
+  // All of these import rules are auto-fixable, keeping our files more consistent and readable
+  // Sort all imports and exports in a default alphabetic order
+  'simple-import-sort/imports': 'error',
+  'simple-import-sort/exports': 'error',
+  // Enforce imports at the top of the file
+  'import/first': 'error',
+  // Enforce a newline after the import section
+  'import/newline-after-import': 'error',
+  // Guard against duplicate imports
+  'import/no-duplicates': 'error',
 };
 
 module.exports = {
@@ -19,7 +30,7 @@ module.exports = {
 
   root: true,
 
-  plugins: ['prettier'],
+  plugins: ['simple-import-sort', 'import', 'prettier'],
 
   extends: ['airbnb', 'prettier'],
 
@@ -45,7 +56,12 @@ module.exports = {
         project: './tsconfig.json',
       },
 
-      plugins: ['@typescript-eslint', 'prettier'],
+      plugins: [
+        '@typescript-eslint',
+        'simple-import-sort',
+        'import',
+        'prettier',
+      ],
 
       extends: [
         'airbnb',
