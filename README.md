@@ -10,15 +10,17 @@ This package allows us to make decisions on code styling for all TypeScript base
 
 - [Usage](#-usage)
 - [Proposing changes](#-proposing-changes)
-- [Versioning](#-versioning)
+- [Versioning and releasing](#-versioning-and-releasing)
 - [Acknowledgements](#-acknowledgements)
 
 ## ⚙️ Usage
 
-1. `yarn add -D eslint eslint-config-toc`
-2. Setup your project config in `.eslintrc.js`:
+1. `yarn add -D eslint eslint-config-toc`.
+2. Add `"prettier": "eslint-config-toc/.prettierrc"` to your `package.json`.
 
 **For bare TypeScript projects**
+
+3. Setup your project config in `.eslintrc.js`:
 
 ```js
 // This enables ESLint to use dependencies of this config
@@ -30,7 +32,11 @@ module.exports = {
 };
 ```
 
+4. Add `"extends": "eslint-config-toc/tsconfig-typescript.json"` to your `tsconfig.json`.
+
 **For React web projects**
+
+3. Setup your project config in `.eslintrc.js`:
 
 ```js
 // This enables ESLint to use dependencies of this config
@@ -42,7 +48,11 @@ module.exports = {
 };
 ```
 
+4. Add `"extends": "eslint-config-toc/tsconfig-react.json"` to your `tsconfig.json`.
+
 **For React Native projects**
+
+3. Setup your project config in `.eslintrc.js`:
 
 ```js
 // This enables ESLint to use dependencies of this config
@@ -54,9 +64,9 @@ module.exports = {
 };
 ```
 
-3. Add `"extends": "eslint-config-toc/tsconfig.json"` to your `tsconfig.json`.
-4. Add `"prettier": "eslint-config-toc/.prettierrc"` to your `package.json`.
-5. Happy linting!
+4. Add `"extends": "eslint-config-toc/tsconfig-react-native.json"` to your `tsconfig.json`.
+
+5. Happy linting! 🎉
 
 ## 📣 Proposing changes
 
@@ -72,12 +82,18 @@ If all of these questions can be answered with a strong 'YES', go ahead with a p
 1. Create a PR to this repository containing:
    - The change, added to the appropriate config (for example, React Native specific deviation rules should be added to `react-native.js`).
    - A comment right above the change(s) in the config files that explains in short why we are using that deviation.
-   - An update to the version number in `package.json`. See [versioning](#-versioning) for details.
-   - If applicable; the changes required to keep the files in this repository valid (test with `yarn lint`).
+   - If applicable; the changes required to keep the files in this repository valid (test with `yarn lint` and `yarn prettier`).
 1. In the PR body, describe the following:
    - What is the reason for this change.
    - What will the impact be on existing projects.
    - How can the changes be (temporarily) ignored. Add a code snippet.
+1. Add an appropriate label to the PR. These are used in our changelog automation:
+
+- `bug` for solving bugs in this library or it's ci configuration.
+- `documentation` for updating the instructions in the README or clarifying comments with existing deviations.
+- `dependencies` for updating existing dependencies. These are usually done automatically by Renovate.
+- `feature` for proposing a new rule deviation or adding a new dependency.
+- `breaking` for any of the above changes when it also will cause breaking changes in any project depending on this library.
 
 ☝️ For an example PR, see #1.
 
@@ -85,11 +101,17 @@ When the PR is ready for review, request reviews from the rest of the team. Disc
 
 When more than half of the rest of the team agrees with the proposed changes, the PR can be merged.
 
-## 📒 Versioning
+## 🚀 Versioning and releasing
 
-- Patch releases are for improved documentation, fixing a rule to stop reporting false positives and internal code changes.
-- Minor releases are for changes to rules that can automatically be fixed.
-- Major releases happen when rules are changed that can't be fixed automatically.
+When a PR is merged, the release notes for the next draft release are automatically prepared. Based on the added labels, the version number in the release title and package.json may be automatically updated as well.
+
+When we are ready to publish a new version to NPM, all we need to do is publish the draft release:
+
+1. Go to the [releases overview](https://github.com/tired-of-cancer/eslint-config-toc/releases).
+1. Check if the last change has been added (the Github action workflow needs to complete after merging the most recent PR).
+1. Edit the existing draft release. If there is no draft release, there were no changes since the last release.
+1. Press `Publish release`.
+1. Presto! A new Github release and tag have been made. A workflow will automatically publish this version to NPM.
 
 ## 🦸 Acknowledgements
 
