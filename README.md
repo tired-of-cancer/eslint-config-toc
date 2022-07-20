@@ -54,8 +54,9 @@ module.exports = {
 };
 ```
 
-3. If you use TypeScript, add `"extends": "eslint-config-toc/tsconfig.json"` to your `tsconfig.json`.
-4. Happy linting!
+3. Add `"extends": "eslint-config-toc/tsconfig.json"` to your `tsconfig.json`.
+4. Add `"prettier": "eslint-config-toc/.prettierrc"` to your `package.json`.
+5. Happy linting!
 
 ## 📣 Proposing changes
 
