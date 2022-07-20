@@ -18,7 +18,8 @@
     "typescript.js",
     "react.js",
     "react-native.js",
-    "tsconfig.json"
+    "tsconfig.json",
+    ".prettierrc.js"
   ],
   "devDependencies": {
     "eslint": "8.20.0"
