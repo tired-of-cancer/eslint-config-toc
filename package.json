@@ -14,10 +14,10 @@
   "author": "Rik van Duijn <ik@rikvanduijn.nl>",
   "license": "MIT",
   "files": [
-    "setupPlugins.ts",
-    "typescript.ts",
-    "react.ts",
-    "react-native.ts",
+    "setupPlugins.js",
+    "typescript.js",
+    "react.js",
+    "react-native.js",
     "tsconfig.json"
   ],
   "devDependencies": {
