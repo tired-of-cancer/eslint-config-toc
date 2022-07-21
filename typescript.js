@@ -23,6 +23,19 @@ const rules = {
   'import/newline-after-import': 'error',
   // Guard against duplicate imports
   'import/no-duplicates': 'error',
+
+  // Sets the maximum line length at 120 (instead of the default 80).
+  // Modern day screens are large enough to make this comfortable
+  'max-len': [
+    'error',
+    {
+      code: 120,
+      // Ignores URLs and Quoted strings because breaking them for readability can cause issues
+      ignoreUrls: true,
+      ignoreStrings: true,
+      ignoreTemplateLiterals: true,
+    },
+  ],
 };
 
 module.exports = {
