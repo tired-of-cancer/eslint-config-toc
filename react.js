@@ -21,5 +21,14 @@ module.exports = {
   ],
 
   // Add React project specific rule deviations here.
-  rules: {},
+  rules: {
+    // Sort props for JSX component alphabetically (while keeping callbacks at the end) to improve readability
+    'react/jsx-sort-props': [
+      'error',
+      {
+        callbacksLast: true,
+        ignoreCase: true,
+      },
+    ],
+  },
 };
