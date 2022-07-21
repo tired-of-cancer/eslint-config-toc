@@ -36,6 +36,9 @@ const rules = {
       ignoreTemplateLiterals: true,
     },
   ],
+
+  // Disallowing unused vars will help us clean up redundant properties and definitions
+  '@typescript-eslint/no-unused-vars': 'error',
 };
 
 module.exports = {
