@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
 
-  plugins: [],
+  plugins: ['react'],
 
   settings: {
     react: {
