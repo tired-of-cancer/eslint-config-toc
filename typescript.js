@@ -45,14 +45,29 @@ const rules = {
   '@typescript-eslint/no-explicit-any': 'error',
 };
 
+// Add plugins that should be used in both vanilla JS and TS linting
+const jsOnlyPlugins = ['simple-import-sort', 'import', 'prettier'];
+
+// Add plugins that should only be used in TS linting
+const tsSpecificPlugins = ['@typescript-eslint'];
+
+// Add extensions that should be used in both vanilla JS and TS linting
+const jsOnlyExtensions = ['airbnb', 'prettier'];
+
+// Add extensions that should only be used in TS linting
+const tsSpecificExtensions = [
+  'airbnb-typescript',
+  'plugin:@typescript-eslint/recommended',
+];
+
 module.exports = {
   parser: '@typescript-eslint/parser',
 
   root: true,
 
-  plugins: ['simple-import-sort', 'import', 'prettier'],
+  plugins: jsOnlyPlugins,
 
-  extends: ['airbnb', 'prettier'],
+  extends: jsOnlyExtensions,
 
   settings: {
     'import/resolver': 'node',
@@ -76,19 +91,9 @@ module.exports = {
         project: './tsconfig.json',
       },
 
-      plugins: [
-        '@typescript-eslint',
-        'simple-import-sort',
-        'import',
-        'prettier',
-      ],
+      plugins: [...jsOnlyPlugins, ...tsSpecificPlugins],
 
-      extends: [
-        'airbnb',
-        'airbnb-typescript',
-        'plugin:@typescript-eslint/recommended',
-        'prettier',
-      ],
+      extends: [...jsOnlyExtensions, ...tsSpecificExtensions],
 
       rules,
     },
