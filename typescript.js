@@ -39,6 +39,10 @@ const rules = {
 
   // Disallowing unused vars will help us clean up redundant properties and definitions
   '@typescript-eslint/no-unused-vars': 'error',
+
+  // Disallowing the 'any' type will help us increase TypeSafety from the get-go. Use 'unknown' instead if necessary
+  // See also https://dev.to/arikaturika/typescript-why-to-use-unknown-instead-of-any-41i8
+  '@typescript-eslint/no-explicit-any': 'error',
 };
 
 module.exports = {
