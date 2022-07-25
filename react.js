@@ -30,5 +30,13 @@ module.exports = {
         ignoreCase: true,
       },
     ],
+
+    // Some unicorn rules are not compatible with React, so we disable them for those projects
+    // See also https://github.com/sindresorhus/eslint-plugin-unicorn/issues/896
+    'unicorn/filename-case': 'off',
+    'unicorn/no-null': 'off',
+    'unicorn/no-useless-undefined': 'off',
+    'unicorn/prefer-query-selector': 'off',
+    'unicorn/prevent-abbreviations': 'off',
   },
 };
