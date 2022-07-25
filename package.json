@@ -15,7 +15,7 @@
   "author": "Rik van Duijn <ik@rikvanduijn.nl>",
   "license": "MIT",
   "files": [
-    "setupPlugins.js",
+    "setup-plugins.js",
     "typescript.js",
     "react.js",
     "react-native.js",
@@ -48,6 +48,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-native": "4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unicorn": "^43.0.2",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   },

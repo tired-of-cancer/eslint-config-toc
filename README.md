@@ -15,6 +15,8 @@ This package allows us to make decisions on code styling for all TypeScript base
 
 ## ⚙️ Usage
 
+This library requires node 16+. 
+
 1. `yarn add -D eslint eslint-config-toc`.
 2. Add `"prettier": "eslint-config-toc/.prettierrc"` to your `package.json`.
 
@@ -25,7 +27,7 @@ This package allows us to make decisions on code styling for all TypeScript base
 ```js
 // This enables ESLint to use dependencies of this config
 // (see https://github.com/eslint/eslint/issues/3458)
-require('eslint-config-toc/setupPlugins');
+require('eslint-config-toc/setup-plugins');
 
 module.exports = {
   extends: ['toc/typescript'],
@@ -41,7 +43,7 @@ module.exports = {
 ```js
 // This enables ESLint to use dependencies of this config
 // (see https://github.com/eslint/eslint/issues/3458)
-require('eslint-config-toc/setupPlugins');
+require('eslint-config-toc/setup-plugins');
 
 module.exports = {
   extends: ['toc/react'],
@@ -57,7 +59,7 @@ module.exports = {
 ```js
 // This enables ESLint to use dependencies of this config
 // (see https://github.com/eslint/eslint/issues/3458)
-require('eslint-config-toc/setupPlugins');
+require('eslint-config-toc/setup-plugins');
 
 module.exports = {
   extends: ['toc/react-native'],
