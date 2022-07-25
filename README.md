@@ -18,7 +18,14 @@ This package allows us to make decisions on code styling for all TypeScript base
 This library requires node 16+. 
 
 1. `yarn add -D eslint eslint-config-toc`.
-2. Add `"prettier": "eslint-config-toc/.prettierrc"` to your `package.json`.
+2. Add the following to your `package.json`:
+
+```json
+"prettier": "eslint-config-toc/.prettierrc",
+"resolutions": {
+  "eslint-plugin-react-native": "4.0.0"
+}
+```
 
 **For bare TypeScript projects**
 
