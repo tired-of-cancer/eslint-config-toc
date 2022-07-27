@@ -9,6 +9,7 @@ jobs:
   update_release_draft_and_version:
     permissions:
       contents: write # to create a release draft and a commit with the version number
+      pull-requests: read # to index a list of pull requests for the release notes
     runs-on: ubuntu-latest
     steps:
       - name: Draft a new release
