@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-toc",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "ESLint config for ToC TypeScript based projects",
   "repository": "https://github.com/tired-of-cancer/eslint-config-toc",
   "main": "index.js",
@@ -41,6 +41,7 @@
     "@typescript-eslint/parser": "^5.30.6",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-next": "^12.2.3",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.0",
