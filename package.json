@@ -19,6 +19,7 @@
     "typescript.js",
     "react.js",
     "react-native.js",
+    "nexstjs.js",
     "tsconfig-typescript.json",
     "tsconfig-react.json",
     "tsconfig-react-native.json",

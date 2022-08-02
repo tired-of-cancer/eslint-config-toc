@@ -1,22 +1,12 @@
 module.exports = {
   root: true,
 
-  plugins: [],
-
-  settings: {
-    react: {
-      version: 'detect',
-    },
-    'import/resolver': {
-      node: {
-        paths: ['node_modules', 'src'],
-      },
-    },
-  },
+  // plugins: [], Already set in React.js
+  // settings: {}, Already set in React.js
 
   extends: [
     '@react-native-community',
-    './react', // Keep next-to-last: ensures our React and TS overrides have priority
+    './react', // Keep last: ensures our React and TS overrides have priority
   ],
 
   // Add React Native specific rule deviations here.

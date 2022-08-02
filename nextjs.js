@@ -1,7 +1,14 @@
 module.exports = {
   root: true,
+
+  // plugins: [], Already set in React.js
+  // settings: {}, Already set in React.js
+
   extends: [
     'next/core-web-vitals',
-    './react', // Keep next-to-last: ensures our TS overrides have priority
+    './react', // Keep last: ensures our TS overrides have priority
   ],
+
+  // Add NextJS project specific rule deviations here.
+  rules: {},
 };
