@@ -69,7 +69,7 @@ module.exports = {
 require('eslint-config-toc/setup-plugins');
 
 module.exports = {
-  extends: ['next/core-web-vitals', 'toc/react'],
+  extends: ['toc/nexstjs'],
 };
 ```
 
