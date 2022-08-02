@@ -15,7 +15,6 @@ module.exports = {
   },
 
   extends: [
-    'airbnb/hooks',
     '@react-native-community',
     './react', // Keep next-to-last: ensures our React and TS overrides have priority
   ],
