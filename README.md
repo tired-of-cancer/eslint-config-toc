@@ -59,6 +59,22 @@ module.exports = {
 
 4. Add `"extends": "eslint-config-toc/tsconfig-react.json"` to your `tsconfig.json`.
 
+**For NextJS web projects**
+
+3. Setup your project config in `.eslintrc.js`:
+
+```js
+// This enables ESLint to use dependencies of this config
+// (see https://github.com/eslint/eslint/issues/3458)
+require('eslint-config-toc/setup-plugins');
+
+module.exports = {
+  extends: ['next/core-web-vitals', 'toc/react'],
+};
+```
+
+4. Add `"extends": "eslint-config-toc/tsconfig-react.json"` to your `tsconfig.json`.
+
 **For React Native projects**
 
 3. Setup your project config in `.eslintrc.js`:
