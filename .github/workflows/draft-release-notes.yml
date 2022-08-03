@@ -16,7 +16,7 @@ jobs:
         id: draft_release
         uses: release-drafter/release-drafter@v5
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOC_BOT_PAT }}
 
       - name: Check out Git repository
         uses: actions/checkout@v3
@@ -30,7 +30,16 @@ jobs:
           version: ${{ steps.draft_release.outputs.tag_name }}
           git-tag-version: 'false'
 
+      - name: Run linters
+        uses: wearerequired/lint-action@v2
+        with:
+          auto_fix: true
+          commit: false
+          eslint: true
+          prettier: true
+
       - name: Commit version number update if changed
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Set version to match next release draft
+          token: ${{ secrets.TOC_BOT_PAT }}

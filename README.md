@@ -15,7 +15,7 @@ This package allows us to make decisions on code styling for all TypeScript base
 
 ## ⚙️ Usage
 
-This library requires node 16+. 
+This library requires node 16+.
 
 1. `yarn add -D eslint eslint-config-toc`.
 2. Add the following to your `package.json`:
