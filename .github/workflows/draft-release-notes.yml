@@ -22,6 +22,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
+          token: ${{ secrets.TOC_BOT_PAT }}
 
       - name: Install dependencies
         run: yarn
@@ -40,9 +41,12 @@ jobs:
           commit: false
           eslint: true
           prettier: true
+          github_token: ${{ secrets.TOC_BOT_PAT }}
 
       - name: Commit version number update if changed
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Set version to match next release draft
-          token: ${{ secrets.TOC_BOT_PAT }}
+          commit_message: Set version to match next release draft [skip actions]
+          commit_author: ToCbot <info@untire.me>
+          commit_user_name: ToCbot
+          commit_user_email: info@untire.me
