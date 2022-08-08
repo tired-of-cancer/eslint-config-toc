@@ -9,6 +9,9 @@ const rules = {
     },
   ],
 
+  // Omitting semicolons makes the codebase easier to read and to manipulate (shifting lines)
+  semi: ['error', 'never'],
+
   // Enforce named exports to ensure consistent usage of component throughout the codebase.
   'import/prefer-default-export': 'off',
   'import/no-default-export': 'error',
@@ -43,23 +46,23 @@ const rules = {
   // Disallowing the 'any' type will help us increase TypeSafety from the get-go. Use 'unknown' instead if necessary
   // See also https://dev.to/arikaturika/typescript-why-to-use-unknown-instead-of-any-41i8
   '@typescript-eslint/no-explicit-any': 'error',
-};
+}
 
 // Add plugins that should be used in both vanilla JS and TS linting
-const jsOnlyPlugins = ['simple-import-sort', 'import', 'unicorn'];
+const jsOnlyPlugins = ['simple-import-sort', 'import', 'unicorn']
 
 // Add plugins that should only be used in TS linting
-const tsSpecificPlugins = ['@typescript-eslint'];
+const tsSpecificPlugins = ['@typescript-eslint']
 
 // Add extensions that should be used in both vanilla JS and TS linting
-const jsOnlyExtensions = ['airbnb'];
+const jsOnlyExtensions = ['airbnb']
 
 // Add extensions that should only be used in TS linting
 const tsSpecificExtensions = [
   'airbnb-typescript',
   'plugin:unicorn/recommended',
   'plugin:@typescript-eslint/recommended',
-];
+]
 
 module.exports = {
   parser: '@typescript-eslint/parser',
@@ -105,4 +108,4 @@ module.exports = {
     browser: true,
     jest: true,
   },
-};
+}

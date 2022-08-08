@@ -18,4 +18,4 @@ module.exports = {
       { ignoreClassNames: false, ignoreStyleProperties: false },
     ],
   },
-};
+}

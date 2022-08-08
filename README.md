@@ -34,11 +34,11 @@ This library requires node 16+.
 ```js
 // This enables ESLint to use dependencies of this config
 // (see https://github.com/eslint/eslint/issues/3458)
-require('eslint-config-toc/setup-plugins');
+require('eslint-config-toc/setup-plugins')
 
 module.exports = {
   extends: ['toc/typescript'],
-};
+}
 ```
 
 4. Add `"extends": "eslint-config-toc/tsconfig-typescript.json"` to your `tsconfig.json`.
@@ -50,11 +50,11 @@ module.exports = {
 ```js
 // This enables ESLint to use dependencies of this config
 // (see https://github.com/eslint/eslint/issues/3458)
-require('eslint-config-toc/setup-plugins');
+require('eslint-config-toc/setup-plugins')
 
 module.exports = {
   extends: ['toc/react'],
-};
+}
 ```
 
 4. Add `"extends": "eslint-config-toc/tsconfig-react.json"` to your `tsconfig.json`.
@@ -66,11 +66,11 @@ module.exports = {
 ```js
 // This enables ESLint to use dependencies of this config
 // (see https://github.com/eslint/eslint/issues/3458)
-require('eslint-config-toc/setup-plugins');
+require('eslint-config-toc/setup-plugins')
 
 module.exports = {
   extends: ['toc/nexstjs'],
-};
+}
 ```
 
 4. Add `"extends": "eslint-config-toc/tsconfig-react.json"` to your `tsconfig.json`.
@@ -82,11 +82,11 @@ module.exports = {
 ```js
 // This enables ESLint to use dependencies of this config
 // (see https://github.com/eslint/eslint/issues/3458)
-require('eslint-config-toc/setup-plugins');
+require('eslint-config-toc/setup-plugins')
 
 module.exports = {
   extends: ['toc/react-native'],
-};
+}
 ```
 
 4. Add `"extends": "eslint-config-toc/tsconfig-react-native.json"` to your `tsconfig.json`.

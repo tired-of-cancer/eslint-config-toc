@@ -11,4 +11,4 @@ module.exports = {
 
   // Add NextJS project specific rule deviations here.
   rules: {},
-};
+}

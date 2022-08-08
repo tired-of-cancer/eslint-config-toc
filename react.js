@@ -39,4 +39,4 @@ module.exports = {
     'unicorn/prefer-query-selector': 'off',
     'unicorn/prevent-abbreviations': 'off',
   },
-};
+}
