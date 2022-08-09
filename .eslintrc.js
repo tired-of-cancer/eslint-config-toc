@@ -6,4 +6,4 @@ module.exports = Object.assign(
       node: true,
     },
   }
-);
+)
