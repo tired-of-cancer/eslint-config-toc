@@ -46,6 +46,10 @@ const rules = {
   // Disallowing the 'any' type will help us increase TypeSafety from the get-go. Use 'unknown' instead if necessary
   // See also https://dev.to/arikaturika/typescript-why-to-use-unknown-instead-of-any-41i8
   '@typescript-eslint/no-explicit-any': 'error',
+
+  // The unicorn rule to disallow array.forEach() conflicts directly with the airbnb rule to disallow loops
+  // In this case, we choose to follow the airbnb guidelines. See also https://github.com/airbnb/javascript/issues/1271
+  'unicorn/no-array-for-each': 'off',
 }
 
 // Add plugins that should be used in both vanilla JS and TS linting
