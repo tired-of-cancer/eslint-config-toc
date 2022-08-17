@@ -50,6 +50,9 @@ const rules = {
   // The unicorn rule to disallow array.forEach() conflicts directly with the airbnb rule to disallow loops
   // In this case, we choose to follow the airbnb guidelines. See also https://github.com/airbnb/javascript/issues/1271
   'unicorn/no-array-for-each': 'off',
+
+  // This goes against the principle set by one of the most popular linting packages. See also https://github.com/sindresorhus/eslint-plugin-unicorn/issues/896
+  'unicorn/filename-case': 'off',
 }
 
 // Add plugins that should be used in both vanilla JS and TS linting
