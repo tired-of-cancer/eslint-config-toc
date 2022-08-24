@@ -27,9 +27,7 @@ This library requires node 16+.
 }
 ```
 
-**For bare TypeScript projects**
-
-3. Setup your project config in `.eslintrc.js`:
+3. Setup your linting config in `.eslintrc.js`:
 
 ```js
 // This enables ESLint to use dependencies of this config
@@ -37,59 +35,25 @@ This library requires node 16+.
 require('eslint-config-toc/setup-plugins')
 
 module.exports = {
-  extends: ['toc/typescript'],
+  // Uncomment only ONE (the most applicable) config for your project and remove the others
+  // extends: ['toc/typescript'],
+  // extends: ['toc/react'],
+  // extends: ['toc/nexstjs'],
+  // extends: ['toc/react-native'],
 }
 ```
 
-4. Add `"extends": "eslint-config-toc/tsconfig-typescript.json"` to your `tsconfig.json`.
+4. Set up your TypeScript config in `tsconfig.json`. If your project was generated with a tsconfig file, make sure to remove all specific rules to prevent conflicts:
 
-**For React web projects**
-
-3. Setup your project config in `.eslintrc.js`:
-
-```js
-// This enables ESLint to use dependencies of this config
-// (see https://github.com/eslint/eslint/issues/3458)
-require('eslint-config-toc/setup-plugins')
-
-module.exports = {
-  extends: ['toc/react'],
+```json
+{
+  // Uncomment only ONE (the most applicable) config for your project and remove the others
+  // "extends": "eslint-config-toc/tsconfig-typescript.json",
+  // "extends": "eslint-config-toc/tsconfig-react.json",
+  // "extends": "eslint-config-toc/tsconfig-nextjs.json",
+  // "extends": "eslint-config-toc/tsconfig-react-native.json",
 }
 ```
-
-4. Add `"extends": "eslint-config-toc/tsconfig-react.json"` to your `tsconfig.json`.
-
-**For NextJS web projects**
-
-3. Setup your project config in `.eslintrc.js`:
-
-```js
-// This enables ESLint to use dependencies of this config
-// (see https://github.com/eslint/eslint/issues/3458)
-require('eslint-config-toc/setup-plugins')
-
-module.exports = {
-  extends: ['toc/nexstjs'],
-}
-```
-
-4. Add `"extends": "eslint-config-toc/tsconfig-react.json"` to your `tsconfig.json`.
-
-**For React Native projects**
-
-3. Setup your project config in `.eslintrc.js`:
-
-```js
-// This enables ESLint to use dependencies of this config
-// (see https://github.com/eslint/eslint/issues/3458)
-require('eslint-config-toc/setup-plugins')
-
-module.exports = {
-  extends: ['toc/react-native'],
-}
-```
-
-4. Add `"extends": "eslint-config-toc/tsconfig-react-native.json"` to your `tsconfig.json`.
 
 5. Happy linting! 🎉
 

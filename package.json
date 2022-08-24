@@ -5,8 +5,7 @@
   "repository": "https://github.com/tired-of-cancer/eslint-config-toc",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
-    "prettier": "prettier --write ."
+    "lint": "eslint . --fix && prettier --write ."
   },
   "keywords": [
     "eslint",
@@ -23,6 +22,7 @@
     "tsconfig-typescript.json",
     "tsconfig-react.json",
     "tsconfig-react-native.json",
+    "tsconfig-nextjs.json",
     ".prettierrc.js"
   ],
   "devDependencies": {
@@ -35,6 +35,7 @@
     "@react-native-community/eslint-config": "^3.0.3",
     "@rushstack/eslint-patch": "^1.1.4",
     "@tsconfig/create-react-app": "^1.0.2",
+    "@tsconfig/next": "^1.0.2",
     "@tsconfig/react-native": "^2.0.2",
     "@tsconfig/recommended": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
