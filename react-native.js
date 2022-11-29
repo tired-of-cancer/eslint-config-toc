@@ -17,5 +17,8 @@ module.exports = {
       'asc',
       { ignoreClassNames: false, ignoreStyleProperties: false },
     ],
+
+    // We don't need a valid "href" prop on Link components since they are not HTML links
+    'jsx-a11y/anchor-is-valid': 'off',
   },
 }
