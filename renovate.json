@@ -4,5 +4,13 @@
   "rangeStrategy": "pin",
   "timezone": "Europe/Amsterdam",
   "enabledManagers": ["npm", "github-actions"],
-  "labels": ["dependencies"]
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "groupName": "Combine and automerge all non-major updates",
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    }
+  ]
 }
