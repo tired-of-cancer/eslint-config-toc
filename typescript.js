@@ -50,6 +50,10 @@ const rules = {
   // The unicorn rule to disallow array.forEach() conflicts directly with the airbnb rule to disallow loops
   // In this case, we choose to follow the airbnb guidelines. See also https://github.com/airbnb/javascript/issues/1271
   'unicorn/no-array-for-each': 'off',
+
+  // This rule disallows callback references like .filter(method) which can make it hard to properly use TypeScript.
+  // In this case we rather have callback references than the need to use type casting.
+  'unicorn/no-array-callback-reference': 'off',
 }
 
 // Add plugins that should be used in both vanilla JS and TS linting
