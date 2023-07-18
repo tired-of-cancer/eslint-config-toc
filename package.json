@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-toc",
-  "version": "1.7.1",
+  "version": "1.8.0",
   "description": "ESLint config for ToC TypeScript based projects",
   "repository": "https://github.com/tired-of-cancer/eslint-config-toc",
   "main": "index.js",
