@@ -1,0 +1,10 @@
+{
+  "name": "eslint-config-toc-typescript",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "../../node_modules/.bin/eslint . --fix  && yarn ../../node_modules/.bin/prettier --write .",
+    "tsc": "../../node_modules/.bin/tsc --noEmit --skipLibCheck"
+  },
+  "private": true,
+  "prettier": "../../.prettierrc"
+}
