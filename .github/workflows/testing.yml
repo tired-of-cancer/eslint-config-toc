@@ -1,4 +1,4 @@
-name: Linting
+name: Testing
 
 on:
   pull_request:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   run-linters:
-    name: Run linters
+    name: Run tests
     runs-on: ubuntu-latest
 
     steps:
@@ -17,9 +17,5 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with:
-          eslint: true
-          prettier: true
-          continue_on_error: false
+      - name: Run tests
+        run: yarn test

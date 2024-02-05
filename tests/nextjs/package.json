@@ -1,0 +1,11 @@
+{
+  "name": "eslint-config-toc-nextjs",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "yarn tsc && yarn lint",
+    "lint": "../../node_modules/.bin/eslint . --fix  && ../../node_modules/.bin/prettier --write .",
+    "tsc": "../../node_modules/.bin/tsc --noEmit --skipLibCheck"
+  },
+  "private": true,
+  "prettier": "../../.prettierrc"
+}

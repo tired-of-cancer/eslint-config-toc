@@ -5,7 +5,8 @@
   "repository": "https://github.com/tired-of-cancer/eslint-config-toc",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint . --fix && prettier --write ."
+    "lint": "eslint . --fix && prettier --write .",
+    "test": "yarn --cwd tests/react-native test && yarn --cwd tests/react test && yarn --cwd tests/typescript test && yarn --cwd tests/nextjs test"
   },
   "keywords": [
     "eslint",
@@ -26,7 +27,8 @@
     ".prettierrc.js"
   ],
   "devDependencies": {
-    "eslint": "8.49.0"
+    "eslint": "8.49.0",
+    "@types/node": "18"
   },
   "peerDependencies": {
     "eslint": "8.49.0"
