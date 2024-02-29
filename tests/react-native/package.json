@@ -2,8 +2,10 @@
   "name": "eslint-config-toc-react-native",
   "version": "0.0.0",
   "scripts": {
-    "test": "yarn tsc && yarn lint",
-    "lint": "../../node_modules/.bin/eslint . --fix  && ../../node_modules/.bin/prettier --write .",
+    "test": "yarn tsc && yarn lint && yarn prettier",
+    "lint": "../../node_modules/.bin/eslint .",
+    "prettier": "../../node_modules/.bin/prettier .",
+    "symlink": "rm -rf ./common && ln -s ../common ./common",
     "tsc": "../../node_modules/.bin/tsc --noEmit --skipLibCheck"
   },
   "private": true,
