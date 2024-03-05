@@ -54,6 +54,10 @@ const rules = {
   // This rule disallows callback references like .filter(method) which can make it hard to properly use TypeScript.
   // In this case we rather have callback references than the need to use type casting.
   'unicorn/no-array-callback-reference': 'off',
+
+  // Disable the `no-for-loop` rule, as it suggests to use the `for-of` construct, which is not allowed.
+  'no-for-loop': 'off',
+  'unicorn/no-for-loop': 'off',
 }
 
 // Add plugins that should be used in both vanilla JS and TS linting
