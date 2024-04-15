@@ -6,9 +6,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --fix && prettier --write .",
-    "test": "yarn --cwd tests/react-native test && yarn --cwd tests/react test && yarn --cwd tests/typescript test && yarn --cwd tests/nextjs test",
-    "symlink": "yarn --cwd tests/react-native symlink && yarn --cwd tests/react symlink && yarn --cwd tests/typescript symlink && yarn --cwd tests/nextjs symlink",
-    "postinstall": "yarn symlink"
+    "test": "yarn symlink && yarn --cwd tests/react-native test && yarn --cwd tests/react test && yarn --cwd tests/typescript test && yarn --cwd tests/nextjs test",
+    "symlink": "yarn --cwd tests/react-native symlink && yarn --cwd tests/react symlink && yarn --cwd tests/typescript symlink && yarn --cwd tests/nextjs symlink"
   },
   "keywords": [
     "eslint",
