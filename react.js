@@ -31,6 +31,21 @@ module.exports = {
       },
     ],
 
+    // Disallow using deprecated global JSX Element type in favor of ReactNode
+    '@typescript-eslint/ban-types': [
+      'error',
+      {
+        types: {
+          'JSX.Element': {
+            message:
+              'Prefer "ReactNode" from React over the deprecated global JSX Element.',
+            fixWith: 'ReactNode',
+          },
+        },
+        extendDefaults: true,
+      },
+    ],
+
     // Some unicorn rules are not compatible with React, so we disable them for those projects
     // See also https://github.com/sindresorhus/eslint-plugin-unicorn/issues/896
     'unicorn/filename-case': 'off',
