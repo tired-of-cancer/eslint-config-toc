@@ -58,6 +58,7 @@
   },
   "resolutions": {
     "eslint-plugin-react-native": "4.1.0",
-    "eslint-plugin-react": "7.33.2"
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0"
   }
 }
