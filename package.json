@@ -44,7 +44,7 @@
     "@tsconfig/recommended": "1.0.10",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-typescript": "18.0.0",
-    "eslint-config-next": "14.1.0",
+    "eslint-config-next": "15.3.5",
     "eslint-config-prettier": "10.1.5",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
@@ -58,9 +58,7 @@
     "typescript": "5.8.3"
   },
   "resolutions": {
-    "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-prettier": "5.5.1",
-    "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "5.2.0"
   }
 }
