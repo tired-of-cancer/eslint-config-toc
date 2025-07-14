@@ -38,26 +38,29 @@
   "dependencies": {
     "@react-native-community/eslint-config": "3.2.0",
     "@rushstack/eslint-patch": "1.7.2",
-    "@tsconfig/create-react-app": "2.0.2",
-    "@tsconfig/next": "2.0.1",
-    "@tsconfig/react-native": "3.0.3",
-    "@tsconfig/recommended": "1.0.3",
+    "@tsconfig/create-react-app": "2.0.6",
+    "@tsconfig/next": "2.0.3",
+    "@tsconfig/react-native": "3.0.6",
+    "@tsconfig/recommended": "1.0.10",
     "eslint-config-airbnb": "19.0.4",
-    "eslint-config-airbnb-typescript": "17.1.0",
+    "eslint-config-airbnb-typescript": "18.0.0",
     "eslint-config-next": "14.1.0",
-    "eslint-config-prettier": "8.10.0",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-jsx-a11y": "6.8.0",
+    "eslint-config-prettier": "10.1.5",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-prettier": "5.5.1",
-    "eslint-plugin-react": "7.33.2",
-    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "5.2.0",
     "eslint-plugin-react-native": "5.0.0",
-    "eslint-plugin-simple-import-sort": "10.0.0",
+    "eslint-plugin-simple-import-sort": "12.1.1",
     "eslint-plugin-unicorn": "50.0.1",
-    "prettier": "3.2.5",
-    "typescript": "5.3.3"
+    "prettier": "3.6.2",
+    "typescript": "5.8.3"
   },
   "resolutions": {
-    "eslint-plugin-prettier": "5.5.1"
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-prettier": "5.5.1",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "5.2.0"
   }
 }
