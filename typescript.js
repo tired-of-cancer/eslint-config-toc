@@ -58,6 +58,10 @@ const rules = {
   // Disable the `no-for-loop` rule, as it suggests to use the `for-of` construct, which is not allowed.
   'no-for-loop': 'off',
   'unicorn/no-for-loop': 'off',
+
+  // Disable deprecated rules from external plugins
+  '@typescript-eslint/lines-between-class-members': 'off',
+  '@typescript-eslint/no-throw-literal': 'off',
 }
 
 // Add plugins that should be used in both vanilla JS and TS linting

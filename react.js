@@ -31,21 +31,6 @@ module.exports = {
       },
     ],
 
-    // Disallow using deprecated global JSX Element type in favor of ReactNode
-    '@typescript-eslint/ban-types': [
-      'error',
-      {
-        types: {
-          'JSX.Element': {
-            message:
-              'Prefer "ReactNode" from React over the deprecated global JSX Element.',
-            fixWith: 'ReactNode',
-          },
-        },
-        extendDefaults: true,
-      },
-    ],
-
     // Disable react/no-unescaped-entities as it causing false positives on single quotes in strings
     // and proposing them to use escaped quotes instead (which interferes with translation.io)
     'react/no-unescaped-entities': 'off',
